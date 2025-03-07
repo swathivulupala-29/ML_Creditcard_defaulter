@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CreditDefaulter Prediction</title>
+        <!-- Link to the static CSS file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+        
+    <body>
+        <div class="container">
+            <h2>CreditDefaulter Prediction</h2>
+            <form id="prediction-form">
+                <label for="age">age</label>
+                <input type="number" id="age" name="age" min= "20" required>
+    
+                <!--<label for="net_yearly_income">net_yearly_income:</label>
+                <select id="net_yearly_income" name="net_yearly_income">
+                    <option value="0">Greater than 10000</option>
+                    <option value="1">Less than 90000</option>
+                    <option value="2">Greater than 90000</option>
+                    <option value="3">Less than 10000</option>
+                </select> -->
+    
+                <label for="prev_defaults">prev_defaults:</label>
+                <select id="prev_defaults" name="prev_defaults">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    <option value="2">Yes</option>
+                </select>
+    
+                <label for="occupation_type">Occupation_type:</label>
+                <select id="occupation_type" name="occupation_type">
+                    <option value="occupation_type_Drivers">occupation_type_Drivers</option>
+                    <option value="occupation_type_Accountants">occupation_type_Accountants</option>
+                    <option value="occupation_type_Sales staff">occupation_type_Sales staff</option>
+                    <option value="occupation_type_Low-skill Laborers">occupation_type_Low-skill Laborers</option>
+                    <option value="occupation_type_IT staff">occupation_type_IT staff</option>
+                    <option value="occupation_type_Medicine staff">occupation_type_Medicine staff</option>
+                    <!-- Add other job roles here -->
+                </select>
+    
+                <button type="submit">Predict_CreditDefaulter</button>
+            </form>
+    
+            <h3>Prediction: <span id="result"></span></h3>
+        </div>
+    
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+    </html>
+    
